@@ -1,4 +1,5 @@
 package api_products.products.entity;
+import api_products.products.entity.dto.ProductRequestDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,4 +26,11 @@ public class Products {
     private Integer cost;
     private Integer price;
 
+    public Products(ProductRequestDTO data){
+        this.sku = data.sku();
+        this.product = data.product();
+        this.stock = data.stock();
+        this.cost = data.cost();
+        this.price = data.price();
+    }
 }
