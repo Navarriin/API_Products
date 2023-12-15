@@ -1,5 +1,4 @@
 package api_products.products.entity;
-import api_products.products.entity.dto.ProductDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.UUID;
 
 @Entity
 @Getter
@@ -20,11 +18,11 @@ public class Products {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private Long id;
     private String sku;
     private String product;
     private Integer stock;
-    private String cost;
-    private String price;
+    private Integer cost;
+    private Integer price;
 
 }
