@@ -1,7 +1,8 @@
 package api_products.products.repository;
-import api_products.products.entity.Products;
+import api_products.products.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-
-public interface ProductsRepositoty extends JpaRepository<Products, Long>{
+@Repository
+public interface ProductsRepositoty extends JpaRepository<Product, Long>{
 }
