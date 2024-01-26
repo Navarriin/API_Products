@@ -2,6 +2,7 @@ package api_products.products.controller;
 
 import api_products.products.dto.ProductDTO;
 import api_products.products.service.ProductService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +37,7 @@ public class ProductsController {
         return ResponseEntity.ok().body(productDTO);
     }
 
+    @Transactional
     @PutMapping("/{id}")
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     public ResponseEntity<ProductDTO> updateProduct(@PathVariable Long id, @RequestBody ProductDTO body) {

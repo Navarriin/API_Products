@@ -2,7 +2,9 @@ package api_products.products.dto.mapper;
 
 import api_products.products.dto.ProductDTO;
 import api_products.products.model.Product;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProductMapper {
     public ProductDTO toDTO(Product product) {
         if(product == null) return null;
